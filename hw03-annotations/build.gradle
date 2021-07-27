@@ -2,18 +2,12 @@ plugins {
     id 'java'
 }
 
-group 'com.k3'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
+sourceCompatibility = JavaVersion.VERSION_14
+targetCompatibility = JavaVersion.VERSION_14
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compileOnly group: 'org.projectlombok', name: 'lombok'
+    implementation group: 'org.slf4j', name: 'slf4j-simple'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
 }
 
-test {
-    useJUnitPlatform()
-}
