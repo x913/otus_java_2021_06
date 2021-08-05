@@ -1,3 +1,4 @@
 rootProject.name = 'otus062021'
 include 'hw01-gradle'
+include 'hw03-annotations'
 
